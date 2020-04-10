@@ -13,7 +13,7 @@ const covid19ImpactEstimator = (data) => {
       currentInfected:calCurrentInfected(10),
       infectionsByRequestedTime:calCurrentInfected(10) * 1024,
       severeCasesByRequestedTime:svcForImpact,
-    	hospitalBedsByRequestedTime:(35/100) * (input.totalHospitalBeds + svForImpact),
+    	hospitalBedsByRequestedTime:(35/100) * (input.totalHospitalBeds + svcForImpact),
       casesForICUByRequestedTime:5/100 * calCurrentInfected(10) * 1024,
       casesForVentilatorsByRequestedTime:(2/100) * (calCurrentInfected(10) * 1024),
       dollarsInFlight: (calCurrentInfected(10) * 1024 * 0.65) * (1.5 * 30)
@@ -23,7 +23,7 @@ const covid19ImpactEstimator = (data) => {
       currentInfected:calCurrentInfected(50),
       infectionsByRequestedTime:calCurrentInfected(50) * 1024,
       severeCasesByRequestedTime:svcForSevereImpact,
-      hospitalBedsByRequestedTime:(35/100) * (input.totalHospitalBeds + svForSevereImpact),
+      hospitalBedsByRequestedTime:(35/100) * (input.totalHospitalBeds + svcForSevereImpact),
       casesForICUByRequestedTime:(5/100) * (calCurrentInfected(50) * 1024),
       casesForVentilatorsByRequestedTime:(2/100) * (calCurrentInfected(50) * 1024),
       dollarsInFlight: (calCurrentInfected(50) * 1024 * 0.65) * (1.5 * 30)
