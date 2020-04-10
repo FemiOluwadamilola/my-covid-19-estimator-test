@@ -5,7 +5,7 @@ const covid19ImpactEstimator = (data) => {
   const calCurrentInfected = (x) => currentInfected * x;
   const svcForImpact = (15 / 100) * (calCurrentInfected(10) * 1024);
   const svcForSevereImpact = (15 / 100) * (calCurrentInfected(50) * 1024);
-  return { 
+  return {
     data: input,
     impact: {
       currentInfected: calCurrentInfected(10),
