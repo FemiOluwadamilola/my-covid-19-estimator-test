@@ -5,7 +5,7 @@ const covid19ImpactEstimator = (data) => {
   const calCurrentInfected = (x) => currentInfected * x;
   const svcForImpact = (15 / 100) * (calCurrentInfected(10) * 1024);
   const svcForSevereImpact = (15 / 100) * (calCurrentInfected(50) * 1024);
-  return{ 
+  return { 
     data: input,
     impact: {
       currentInfected: calCurrentInfected(10),
@@ -24,8 +24,8 @@ const covid19ImpactEstimator = (data) => {
       casesForICUByRequestedTime: (5 / 100) * (calCurrentInfected(50) * 1024),
       casesForVentilatorsByRequestedTime: (2 / 100) * (calCurrentInfected(50) * 1024),
       dollarsInFlight: (calCurrentInfected(50) * 1024 * 0.65) * (1.5 * 30)
-}
-};
+    }
+  };
 };
 
-  export default covid19ImpactEstimator;
+export default covid19ImpactEstimator;
