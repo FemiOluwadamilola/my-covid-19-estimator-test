@@ -1,7 +1,7 @@
 const covid19ImpactEstimator = (data) => {
   const input = data;
   const infected = input.reportedCases;
-  var currentInfected = infected;
+  let currentInfected = infected;
   // function to get currentInfected 
   const calCurrentInfected = (x) => currentInfected * x;
   // variables for 
